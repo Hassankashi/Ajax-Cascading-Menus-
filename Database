@@ -1,0 +1,30 @@
+--Create Country Table 
+CREATE TABLE [dbo].[tblCountry](
+    [Country] [nvarchar](50) NULL,
+    [IDC] [int] IDENTITY(1,1) NOT NULL
+    ) ON [PRIMARY]
+
+--Fill Country Table 
+insert into dbo.tblCountry(Country) values('United States')
+insert into dbo.tblCountry(Country) values('United Kingdom')
+insert into dbo.tblCountry(Country) values('Spain')
+insert into dbo.tblCountry(Country) values('France')
+insert into dbo.tblCountry(Country) values('Norway')
+
+--Create City Table 
+CREATE TABLE [dbo].[tblCity](
+[City] [nvarchar](50) NULL,
+[CountryID] [int] Not NULL,
+[ID] [int] IDENTITY(1,1) NOT NULL
+)
+ON [PRIMARY]
+
+--Fill City Table 
+insert into dbo.tblCity(City,CountryID) values('Michigan',1)
+insert into dbo.tblCity(City,CountryID) values('New York',1)
+insert into dbo.tblCity(City,CountryID) values('London',2)
+insert into dbo.tblCity(City,CountryID) values('Barcelona',3)
+insert into dbo.tblCity(City,CountryID) values('Madrid',3)
+insert into dbo.tblCity(City,CountryID) values('Paris',4)
+insert into dbo.tblCity(City,CountryID) values('Kristiansand',5) 
+insert into dbo.tblCity(City,CountryID) values('Oslo',5)
